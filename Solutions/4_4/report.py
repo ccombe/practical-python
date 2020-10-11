@@ -13,8 +13,7 @@ def read_portfolio(filename):
                                         select=['name','shares','price'], 
                                         types=[str,int,float])
 
-    portfolio = [ Stock(d['name'], d['shares'], d['price']) for d in portdicts ]
-    return portfolio
+    return [ Stock(d['name'], d['shares'], d['price']) for d in portdicts ]
 
 def read_prices(filename):
     '''
